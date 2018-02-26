@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title> 上传文件 </title>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="../css/home.css" rel="stylesheet" />
+	</head>
+
+	<body style="background-color: rgba(244, 244, 244, 1);">
+		<nav class="navbar navbar-inverse" role="navigation" style="border-radius :0px; background-color: rgba(63,63,63,1);">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#"><img src="../img/loo.png" style="height:30px; width: auto;"></a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav" style="min-height: 100%;">
+						<li>
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="#">我的知识库</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								企业知识库 <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" style="min-width: 100%;background-color: rgba(63,63,63,1);">
+								<li>
+									<a href="#">企业文档</a>
+								</li>
+								<li>
+									<a href="#">知识结构</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">学习路径</a>
+						</li>
+					</ul>
+
+					<!-- 向右对齐 -->
+					<ul class="nav navbar-nav navbar-right">
+						<!-- 搜索框  -->
+						<form class="navbar-form navbar-left" role="search">
+							<div class="input-group">
+								<input type="text" class="form-control" style="border-radius :0px;" placeholder="输入关键字搜索..." />
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="submit" style="border-radius :0px;">
+										<span class="glyphicon glyphicon-search" style="color: dodgerblue;"></span>
+								</button>
+								</span>
+							</div>
+						</form>
+						<li style="margin-top: 10px;">
+							<!-- 头像 -->
+							<img src="../img/滑稽.jpg" class="img-circle" style="height: 30px; width: 30px;" />
+						</li>
+						<li>
+							<a href="#" style="font-size: 14px; color: darkgray; padding-left: 10px; " class="dropdown-toggle" data-toggle="dropdown">
+								曾祥<b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu" style="min-width: 100%;">
+								<li>
+									<a href="#" style="color: black;"><span class="glyphicon glyphicon-user"></span> 个人中心</a>
+								</li>
+								<li>
+									<a href="#" style="color: black;"><span class="badge">3</span>消息</a>
+								</li>
+								<li>
+									<a href="#" style="color: black;"><span class="glyphicon glyphicon-log-out"></span> 注销</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container" style="background-color: white; padding: 0 25px 25px 25px;>
+			<div class=" row ">
+				<div class="col-md-12 ">
+					<h3 style="font-family: '微软雅黑'; ">上传文档</h3>
+					<br><br>
+					<div class="row ">
+						<div class="col-md-12 ">
+							<div class="text-center ">
+								<span class="doing ">&nbsp;1&nbsp;</span> 选择文件
+								<span style="margin-left: 15px;margin-right: 15px; color: #CCCCCC; ">————————————</span>
+								<span class="todo ">&nbsp;2&nbsp;</span><span class="text-muted "> 完善信息</span>
+								<span style="margin-left: 15px;margin-right: 15px; color: #CCCCCC; ">————————————</span>
+								<span class="todo ">&nbsp;3&nbsp;</span><span class="text-muted "> 完成上传</span>
+							</div>
+							<br><br>
+						</div>
+					</div>
+
+					<div class="row ">
+						<div class="col-md-4 "></div>
+						<div class="col-md-4 ">
+							<div class="text-center ">
+								<button class="btn btn-default " style="padding: 25px; width: 100%; border-radius: 0;background-color: #FBFBFB; ">
+									<img src="../img/icon-upload.png " width="78 " height="62 "/>
+									<br><br>
+									<p>点击或将文件拖拽到这里上传</p>
+									<p class="text-muted ">支持扩展名：.doc .ppt .xls .docx .mp4 .txt...</p>
+								</button>
+							</div>
+							<br>
+							<div>
+								<span class="glyphicon glyphicon-link "></span> 文档.doc
+								<button type="button " class="close " aria-hidden="true ">&times;</button>
+								<div class="progress " style="height: 1px; ">
+									<div class="progress-bar" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 40%;background-color: #108EE9;">
+										<span class="sr-only ">40% 完成</span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<span class="glyphicon glyphicon-link "></span> 文档.doc
+								<button type="button " class="close " aria-hidden="true ">&times;</button>
+								<div class="progress " style="height: 1px; ">
+									<div class="progress-bar" role="progressbar " aria-valuenow="50 " aria-valuemin="0 " aria-valuemax="100 " style="width: 50%; background-color: #108EE9;">
+										<span class="sr-only ">50% 完成</span>
+									</div>
+								</div>
+							</div>
+							<div>
+								<span class="glyphicon glyphicon-link "></span> 文档.doc
+								<button type="button " class="close " aria-hidden="true ">&times;</button>
+								<div class="progress " style="height: 1px; ">
+									<div class="progress-bar" role="progressbar " aria-valuenow="40 " aria-valuemin="0 " aria-valuemax="100 " style="width: 60%; background-color: #108EE9;">
+										<span class="sr-only ">60% 完成</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 "></div>
+					</div>
+
+					<hr>
+					<div class="row ">
+						<div class="col-md-3 "></div>
+						<div class="col-md-6 ">
+							<p style="font-family: '微软雅黑'; font-size: 14px;font-weight: bold; ">温馨提示</p>
+							<ol class="text-muted ">
+								<li>您可以上传日常积累和撰写的文档资料，如模板、总结，每次可上传≤20份，每份≤200MB，支持多种文档类型：doc、docx、ppt、pptx、xls、xlsx、vsd、pot、pps、rtf、wps、et、dps、pdf、txt、epub</li>
+								<li>上传涉及侵权内容的文档将会被移除</li>
+								<li>上传有问题需要帮助？查看帮助文件</li>
+								<li>为营造绿色网络环境，严禁上传含有淫秽色情及低俗信息等文档，让我们一起携手共同打造健康企业知识库</li>
+							</ol>
+						</div>
+						<div class="col-md-3 "></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
