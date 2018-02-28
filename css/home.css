@@ -1,3 +1,5 @@
+body{font-family:"微软雅黑","Arial Narrow";}
+
 .navbar .nav li a {
 	color: white;
 	font-family: "microsoft yahei";
@@ -107,5 +109,9 @@ div .container .row .col-md-4 .knlg-struct a h4{
 .text-muted{
 	color: #CCCCCC;
 	font-size: 12px;
+}
+
+.btn-primary{
+	background-color: #108EE9;
 }
 
