@@ -1,0 +1,30 @@
+div .blue{
+	background-color: blue;
+}
+div .red{
+	background-color: red;
+}
+ul .search-list{
+	list-style-type: none;
+}
+li .search-list-li{
+	display: none;
+}
+.fenge{
+padding:12px 6px 0px 6px;
+margin-left: 6px;
+border-left: 1px solid #DCDCDC;
+font-size: 0;
+}
+.fenge-all{
+padding:10px 1px 600px 1px;
+margin-left: 0px;
+border-left: 1px solid #DCDCDC;
+font-size: 0;
+}
+.gray-word{
+	color:#DCDCDC;
+}
+.blue-word{
+	color:blue;
+}
