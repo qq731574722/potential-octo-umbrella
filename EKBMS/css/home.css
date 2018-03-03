@@ -115,3 +115,24 @@ div .container .row .col-md-4 .knlg-struct a h4{
 	background-color: #108EE9;
 }
 
+.fa-file-word-o{
+	color: #4269A5;
+}
+.fa-file-excel-o{
+	color: #1F6B41;
+}
+.fa-file-powerpoint-o{
+	color: #C44423;
+}
+
+.fa-file-pdf-o{
+	color: #CC0000;
+}
+
+.fa-file-video-o{
+	color: #8E4F89;
+}
+
+.fa-file-text-o{
+	color: #0099CC;
+}
