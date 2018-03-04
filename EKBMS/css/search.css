@@ -28,3 +28,11 @@ font-size: 0;
 .blue-word{
 	color:blue;
 }
+.selected{
+	color: #108EE9;
+	border-color: #108EE9;
+}
+
+.radio-inline{
+	margin-left: 0;
+}
