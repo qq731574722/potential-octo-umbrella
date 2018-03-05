@@ -36,3 +36,11 @@ font-size: 0;
 .radio-inline{
 	margin-left: 0;
 }
+.gray-btn{
+	background-color: lightgrey;
+}
+.selected-blue{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+}

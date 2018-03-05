@@ -19,7 +19,7 @@
 <link href="css/search.css" rel="stylesheet" />
 </head>
 
-<body style="background-color: rgba(244, 244, 244, 1);">
+<body style="background-color: rgba(244, 244, 244, 1);font-family: '微软雅黑';">
 	<!-- 顶部导航栏 -->
 	<nav class="navbar navbar-inverse" role="navigation"
 		style="border-radius: 0px; background-color: rgba(63, 63, 63, 1);">
@@ -83,12 +83,10 @@
 	<!-- 搜索主体 -->
 	<div class="container" style="background-color: white; padding:25px;">
 		<div class="row clearfix">
-			<div class="col-md-3 column">
+			<div class="col-md-2 column">
 				<div class="row clearfix">
-					
 					<!-- 分类筛选块 -->
 					<div class="col-md-12 column">
-					<div class="pull-right"><span class="fenge-all"></span></div>
 								<div class="tree">
 									<br>
 									<h3>分类筛选</h3>
@@ -137,21 +135,22 @@
 					</div>
 				</div>
 				<!-- 搜索结果块 -->
-				<div class="col-md-9 column">
+				<div class="col-md-10 column">
+					<div class="pull-left"><span class="fenge-all"></span></div>
 					<div class="container-fluid">
 						<div class="row clearfix">
 							<div class="col-md-6 column white">
 								根据 <b>关键字</b> 共为你找到 21 条相关结果
-								<button class="btn btn-default btn-sm" type="submit">
-									<i class="fas fa-filter"></i>筛选
+								<button class="btn btn-default btn-sm gray-btn" type="submit">
+									<i class="fas fa-filter" style="color: #6C757D;"></i>筛选
 								</button>
 							</div>
-							<div class="col-md-2 column white"></div>
+							<div class="col-md-2 column"></div>
 							<!-- 中部搜索区 -->
-							<div class="col-md-4 column white">
+							<div class="col-md-4 column pull-right">
 								<div class="input-group">
 									<input type="text" class="form-control"
-										placeholder="Search for..."> <span
+										placeholder="请输入关键词"> <span
 										class="input-group-btn">
 										<button class="btn btn-primary" type="button">搜索</button>
 									</span>
@@ -172,41 +171,42 @@
 									<button type="button" class="btn btn-default">知识结构</button>
 									<button type="button" class="btn btn-default">学习路径</button>
 								</div>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								<div class="column btn-group">
-									<button type="button"
-										class="btn btn-primary btn-sm dropdown-toggle"
-										data-toggle="dropdown" aria-expanded="false">
-										所有时间 <span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="#">一天内</a></li>
-										<li><a href="#">一周内</a></li>
-										<li><a href="#">一月内</a></li>
-										<li><a href="#">一年内</a></li>
-									</ul>
+									<form class="form-inline" role="form">
+								<select class="form-control selected-blue" style="width: 90px;height: 31px;">
+									<option>所有时间</option>
+									<option>一天内</option>
+									<option>一周内</option>
+									<option>一月内</option>
+									<option>一年内</option>
+								</select>
+								</form>
 								</div>
 							</div>
 							<!-- 文件格式筛选块 -->
 							<div class="col-md-6 column">
-								文档格式：<label class="radio-inline"> <input type="radio"
+								<small>
+								<label class="radio-inline">文档格式：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"
 									name="inlineRadioOptions" id="inlineRadio1" value="option1">
-									<small>DOC</small>
-								</label> <label class="radio-inline" style="margin-left: 0;"> <input type="radio"
+									<small>DOC&nbsp;</small>
+								</label><label class="radio-inline" style="margin-left: 0;"> <input type="radio"
 									name="inlineRadioOptions" id="inlineRadio2" value="option2">
 									<small>XLS</small>
 								</label> <label class="radio-inline" style="margin-left: 0;"> <input type="radio"
 									name="inlineRadioOptions" id="inlineRadio3" value="option3">
 									<small>PPT</small>
 								</label> <label class="radio-inline" style="margin-left: 0;"> <input type="radio"
-									name="inlineRadioOptions" id="inlineRadio3" value="option3">
+									name="inlineRadioOptions" id="inlineRadio4" value="option3">
 									<small>PDF</small>
 								</label> <label class="radio-inline" style="margin-left: 0;"> <input type="radio"
-									name="inlineRadioOptions" id="inlineRadio3" value="option3">
+									name="inlineRadioOptions" id="inlineRadio5" value="option3">
 									<small>TXT</small>
 								</label> <label class="radio-inline" style="margin-left: 0;"> <input type="radio"
-									name="inlineRadioOptions" id="inlineRadio3" value="option3">
+									name="inlineRadioOptions" id="inlineRadio6" value="option3">
 									<small>视频</small>
 								</label>
+								</small>
 							</div>
 						</div>
 					</div>
@@ -219,88 +219,53 @@
 						<a href="#" class="list-group-item"> <i class="far fa-file-pdf fa-lg"></i>&nbsp;&nbsp;<big><b>入门网站包</b></big>
 							<br> 这里是文档的概要说明<span class="blue-word">关键字是蓝色</span>这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明
 							<br>
-							<div class="container-fluid">
-								<div class="row clearfix gray-word">
-									<div class="col-md-3 column">2018-2-27 00:00:00</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">99下载</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">贡献者：曾祥</div>
-									<div class="col-md-3 column"></div>
-								</div>
-							</div>
+							<p class="gray-word">
+								<small>
+								2018-2-27 00:00:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+							</p>
 						</a> <a href="#" class="list-group-item"> <i class="far fa-file-pdf fa-lg"></i>&nbsp;&nbsp;<big><b>入门网站包</b></big>
 							<br> 这里是文档的概要说明<span class="blue-word">关键字是蓝色</span>这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明
 							<br>
-							<div class="container-fluid">
-								<div class="row clearfix gray-word">
-									<div class="col-md-3 column">2018-2-27 00:00:00</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">99下载</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">贡献者：曾祥</div>
-									<div class="col-md-3 column"></div>
-								</div>
-							</div>
+							<p class="gray-word">
+								<small>
+								2018-2-27 00:00:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+							</p>
 						</a> <a href="#" class="list-group-item"> <i class="far fa-file-pdf fa-lg"></i>&nbsp;&nbsp;<big><b>入门网站包</b></big>
 							<br> 这里是文档的概要说明<span class="blue-word">关键字是蓝色</span>这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明
 							<br>
-							<div class="container-fluid">
-								<div class="row clearfix gray-word">
-									<div class="col-md-3 column">2018-2-27 00:00:00</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">99下载</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">贡献者：曾祥</div>
-									<div class="col-md-3 column"></div>
-								</div>
-							</div>
+							<p class="gray-word">
+								<small>
+								2018-2-27 00:00:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+							</p>
 						</a> <a href="#" class="list-group-item"> <i class="far fa-file-pdf fa-lg"></i>&nbsp;&nbsp;<big><b>入门网站包</b></big>
 							<br> 这里是文档的概要说明<span class="blue-word">关键字是蓝色</span>这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明
 							<br>
-							<div class="container-fluid">
-								<div class="row clearfix gray-word">
-									<div class="col-md-3 column">2018-2-27 00:00:00</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">99下载</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">贡献者：曾祥</div>
-									<div class="col-md-3 column"></div>
-								</div>
-							</div>
+							<p class="gray-word">
+								<small>
+								2018-2-27 00:00:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+							</p>
 						</a> <a href="#" class="list-group-item"> <i class="far fa-file-pdf fa-lg"></i>&nbsp;&nbsp;<big><b>入门网站包</b></big>
 							<br> 这里是文档的概要说明<span class="blue-word">关键字是蓝色</span>这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明这里是文档的概要说明
 							<br>
-							<div class="container-fluid">
-								<div class="row clearfix gray-word">
-									<div class="col-md-3 column">2018-2-27 00:00:00</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">99下载</div>
-									<div class="col-md-1 column">
-										<span class="fenge"></span>
-									</div>
-									<div class="col-md-2 column">贡献者：曾祥</div>
-									<div class="col-md-3 column"></div>
-								</div>
-							</div>
+							<p class="gray-word">
+								<small>
+								2018-2-27 00:00:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+							</p>
 						</a>
 						</div>
 						</div>
