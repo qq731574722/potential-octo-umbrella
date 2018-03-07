@@ -17,7 +17,7 @@ border-left: 1px solid #DCDCDC;
 font-size: 0;
 }
 .fenge-all{
-padding:10px 1px 600px 1px;
+padding:10px 1px 688px 1px;
 margin-left: 0px;
 border-left: 1px solid #DCDCDC;
 font-size: 0;
@@ -42,5 +42,21 @@ font-size: 0;
 .selected-blue{
 	padding-left: 2px;
 	padding-right: 2px;
+	padding-top: 2px;
+}
+.a-link{
+	color: #000000;
+}
+.link-picture{
+	color: red;
+}
+.no-border-all{
+	border: 0px;
+}
+.no-border{
+	border-left: 0px;
+	border-right: 0px;
+}
+.search-btn{
 	padding-top: 2px;
 }
