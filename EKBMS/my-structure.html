@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 企业知识库 - 我的知识结构 </title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="css/home.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation" style="border-radius :0px; background-color: rgba(63,63,63,1); margin-bottom: 0px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <!--  LOGO位置 -->
+            <a class="navbar-brand" href="#"><img src="img/logo.png" style="height:30px; width: auto;"></a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav" style="min-height: 100%;">
+                <li class="active">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">我的知识库</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        企业知识库 <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width: 100%;background-color: rgba(63,63,63,1);">
+                        <li>
+                            <a href="#">企业文档</a>
+                        </li>
+                        <li>
+                            <a href="#">知识结构</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">学习路径</a>
+                </li>
+            </ul>
+
+            <!-- 向右对齐 -->
+            <ul class="nav navbar-nav navbar-right">
+                <!-- 搜索框  -->
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" style="border-radius :0px;" placeholder="输入关键字搜索..." />
+                        <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit" style="border-radius :0px;">
+                                            <span class="glyphicon glyphicon-search" style="color: dodgerblue;"></span>
+                                    </button>
+                                    </span>
+                    </div>
+                </form>
+                <li style="margin-top: 10px;">
+                    <!-- 头像 -->
+                    <img src="img/滑稽.jpg" class="img-circle" style="height: 30px; width: 30px;" />
+                </li>
+                <li>
+                    <a href="#" style="font-size: 14px; color: darkgray; padding-left: 10px; " class="dropdown-toggle" data-toggle="dropdown">
+                        曾祥<b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" style="min-width: 100%;">
+                        <li>
+                            <a href="#" style="color: black;"><span class="glyphicon glyphicon-user"></span> 个人中心</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: black;"><span class="badge">3</span>消息</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color: black;"><span class="glyphicon glyphicon-log-out"></span> 注销</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- end container-fluid -->
+</nav>
+<!-- end nav -->
+
+<div style="width: 100%;background: #F5F5F5;box-shadow:0px 0px 1px rgba(248,248,255, 0.349019607843137);padding-top: 10px; padding-bottom: 10px; margin-top: 5px;margin-bottom: 5px;">
+
+    <div class="container">
+        <div id="content" class="row">
+            <div class="col-md-9">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Photos</a></li>
+                    <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
+                    <li class="breadcrumb-item"><a href="#">Italy</a></li>
+                    <li class="breadcrumb-item active">Rome</li>
+                </ul>
+                <div style="width: 100%;background: #FFFFFF;border:1px solid #e8e5e5;box-shadow:0px 0px 1px rgba(248,248,255, 0.349019607843137);padding-top: 10px; padding-bottom: 10px; margin-top: 5px;margin-bottom: 5px;">
+
+
+                    <h5>&nbsp &nbsp我的知识库</h5>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#">我的文档</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " data-toggle="tab" href="#home">我的知识结构</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#menu1">我的学习计划</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="row">
+                        <div class="col-md-2">
+                            <ul class="nav flex-column" style="margin-top:20px;">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">我的收藏</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="#">我的创建</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-10">
+
+                            <div class="row" style="margin-right: 20px;margin-top:20px">
+                                <div class="col-md-4">
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1453169124795_795.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;">
+                                            <button class="btn btn-defualt btn-sm btn-view">查看知识结构</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4" >
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1490351555635_635.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;"><button class="btn btn-defualt btn-sm btn-view">查看知识结构</button></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1453701371793_793.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;"><button class="btn btn-defualt btn-sm btn-view">查看知识结构</button></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1453169124795_795.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;">
+                                            <button class="btn btn-defualt btn-sm btn-view">查看知识结构</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4" >
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1490351555635_635.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;"><button class="btn btn-defualt btn-sm btn-view">查看知识结构</button></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1453701371793_793.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;"><button class="btn btn-defualt btn-sm btn-view">查看知识结构</button></div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1453169124795_795.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;">
+                                            <button class="btn btn-defualt btn-sm btn-view">查看知识结构</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4" >
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1490351555635_635.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;"><button class="btn btn-defualt btn-sm btn-view">查看知识结构</button></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="knlg-struct" style="background: #F5F5F5;box-shadow: 2px 4px 6px #696969;">
+                                        <img src="img/1453701371793_793.jpg" style="width: 100%; height: auto;" />
+                                        <a href="#">
+                                            <h4>微观经济学</h4></a>
+                                        <p class="text-center"> 256 <span class="text-muted">关注者 </span> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; | &nbsp; &nbsp; &nbsp; 24 <span class="text-muted">关联知识</span></p>
+                                        <div style="text-align: center; margin-top: 15px;"><button class="btn btn-defualt btn-sm btn-view">查看知识结构</button></div>
+
+                                    </div>
+                                </div>
+                            </div><br/><br/><br/>
+
+                            <ul class="pagination" style="margin-left:200px">
+                                <li class="page-item"><a class="page-link" href="#">Previews</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-3" style="padding-top: 10px">
+                <br/><br/>
+                <div style="width: 100%;background: #FFFFFF;border:1px solid #e8e5e5;box-shadow:0px 0px 1px rgba(248,248,255, 0.349019607843137);padding-top: 30px; padding-bottom: 10px; padding-left : 35px; margin-top: 5px;margin-bottom: 5px;">
+
+                    <div class="card" style="width:200px">
+
+                        <img src="img/头像.jpg" class="img-circle" alt="Card image" style="width:50%"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 曾祥
+                        <hr/>
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <p class="card-text">
+                                贡献积分&nbsp;<i class="far fa-question-circle" style="color: darkgrey;"></i> &nbsp;  &nbsp;&nbsp;&nbsp; 排名<br/>
+                                &nbsp&nbsp 1080  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;   &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; 16
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%;background: #FFFFFF;box-shadow:0px 0px 1px rgba(248,248,255, 0.349019607843137);border:1px solid #e8e5e5;padding-top: 10px; padding-bottom: 10px; padding-left : 30px; margin-top: 15px;margin-bottom: 0px;">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">立刻上传我的资源</h4>
+                            <a href="#" class="btn btn-info" style="width: 200px"><span class="glyphicon glyphicon-download-alt"></span>&nbsp&nbsp 点击上传文件</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%;background: #FFFFFF;box-shadow:0px 0px 1px rgba(248,248,255, 0.349019607843137);border:1px solid #e8e5e5;padding-top: 10px; padding-bottom: 10px; padding-left : 30px; margin-top: 0px;margin-bottom: 0px;">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">建造新的知识结构</h4>
+                            <button type="button" class="btn btn-primary" style="width: 200px"><span class="glyphicon glyphicon-pencil"></span>&nbsp&nbsp 建立知识结构</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%;background: #FFFFFF;box-shadow:0px 0px 1px rgba(248,248,255, 0.349019607843137);border:1px solid #e8e5e5;padding-top: 10px; padding-bottom: 10px; padding-left : 30px; margin-top: 0px;margin-bottom: 5px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">建立新的学习路径</h4>
+                            <a href="#" class="btn btn-warning" style="width: 200px"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp&nbsp 创建学习路径</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 100%;background: #FFFFFF;box-shadow:0px 0px 1px rgba(248,248,255, 0.349019607843137);border:1px solid #e8e5e5;padding-top: 10px; padding-bottom: 20px; padding-left : 30px; margin-top: 15px;margin-bottom: 5px;">
+                    <h4>推荐内容</h4>
+                    <img src="img/图片1.png" style="width: 90%"><br/><br/>
+                    <img src="img/2.png" style="width: 90%">
+                </div>
+            </div>
+
+        </div>
+    </div><!--主要界面div-->
+
+    <p class="text-center">
+        帮助  • 反馈  • 关于我们<br/>本项目由湖南中医药大学Ultimate团队开发，本公司享有使用权
+    </p>
+</div>
+<!-- end 主页面div -->
+
+</body>
+</html>
