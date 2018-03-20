@@ -1,6 +1,16 @@
-.no-border-all{
+.no-border-all {
 	border: 0px;
 }
-body{
+
+body {
 	padding-left: 41px;
+}
+
+.word-canvas {
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+}
+.word-over-message {
+	font-size: larger;
 }
