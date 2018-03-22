@@ -12,12 +12,18 @@
 		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 		<link href="css/home.css" rel="stylesheet" />
 		<link href="css/tradition-mode.css" rel="stylesheet" />
+		<style>
+			.text-muted
+			{
+				font-size: 14px;
+			}
+		</style>
 	</head>
 
-	<body style="background-color: rgba(244, 244, 244, 1);font-family: '微软雅黑';">
+	<body style="background-color: rgba(244, 244, 244, 1);font-family: '微软雅黑';padding: 0;">
 		<!-- 顶部导航栏 -->
 		<nav class="navbar navbar-inverse" role="navigation" style="border-radius: 0px; background-color: rgba(63, 63, 63, 1);">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#"><img src="img/loo.png" style="height: 30px; width: auto;"></a>
 				</div>
@@ -82,28 +88,9 @@
 				</div>
 			</div>
 		</nav>
-		<ol class="breadcrumb" style="position: absolute;left: 39px;top: 54px;">
-			<li class="active">
-				<small>面包屑</small>
-			</li>
-			<li class="active">
-				<small>面包屑</small>
-			</li>
-			<li><small>面包屑</small></li>
-		</ol>
-		<br>
-		<div class="container-fluid">
-			<div class="row clearfix">
-				<div class="col-md-12 column">
-					<div class="row clearfix">
-						<div class="col-md-9 column">
-							<div class="container-fluid">
-								<div class="row clearfix">
-									<div class="col-md-12 column pull-left" style="background-color: white; padding:25px;">
-										<!--底部固定栏-->
-										<nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: #D6D8DB;">
+		<nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: #D6D8DB;">
 											<div class="container">
-												<div class="col-md-3 pull-left" style="padding-top: 13px;">
+												<div class="col-md-3" style="padding-top: 13px;">
 													<form class="form-inline" role="form">&nbsp;&nbsp;跳至 &nbsp;&nbsp;<input type="text" class="form-control" placeholder="5" style="width: 33px;height: 25px;padding: 8px;">&nbsp; 页共 20 页
 													</form>
 												</div>
@@ -120,6 +107,27 @@
 												</div>
 											</div>
 										</nav>
+		
+		<div class="container">
+			
+			<div class="row">
+				
+				<div class="col-md-12">
+					
+					<div class="row">
+						<ol class="breadcrumb" style="position: absolute;left: 39px;top: 54px;">
+						<li class="active">
+							<small>面包屑</small>
+						</li>
+						<li class="active">
+							<small>面包屑</small>
+						</li>
+						<li><small>面包屑</small></li>
+					</ol>
+						<div class="col-md-9" style="padding: 15px;">
+							<div class="" style="background-color: white; padding:25px;margin-bottom: 80px;">
+										<!--底部固定栏-->
+										
 										<h4><b>卢卡斯均衡经济周期理论</b></h4>
 										<p style="color: #9F9F9F;">
 											<small>
@@ -130,52 +138,57 @@
 											</small>
 										</p>
 										<hr>
-										<div id="showWordDiv">
+										<div id="showWordDiv" style="width: 100%; height: auto;">
 											
 										</div>
 										<br>
-										<div class="col-md-3 col-md-offset-5">
+										<div class="text-center">
 											<button id="addMore" class="btn btn-default btn-lg" type="button" style="color: dodgerblue;border-color: dodgerblue;">加载更多</button>
-										</div><br><br>
-										<hr>
-										<div class="container">
-											<div class="row clearfix">
-												<div class="col-md-1"></div>
-												<div class="col-md-10">
-													<small>共158条评论</small>
-													<ul class="list-group">
-														<li class="list-group-item no-border-all" style="margin-top: 10px;">
-																<div class="row clearfix">
-																<div class="col-md-1" style="padding-right: 0px;">
-																<img src="img/滑稽.jpg" class="img-circle" style="height: 30px; width: 30px;" />
-																</div>
-																<div class="col-md-11" style="padding-left: 0px;">
-															<input type="text" class="form-control" placeholder="添加评论">
-															</div></div>
-														</li>
-														<li class="list-group-item no-border-all">
-															<img src="img/滑稽.jpg" class="img-circle" style="height: 30px; width: 30px;" />禺彊   一周前<br>
-															111
-														</li>
-														<li class="list-group-item no-border-all"><span class="fa fa-file-word-o"></span>&nbsp;<small>今日头条&克尔瑞：2017房地产...</small></li>
-														<li class="list-group-item no-border-all"><span class="fa fa-file-powerpoint-o"></span>&nbsp;<small>IBM 商业价值研究院：实实现明...</small></li>
-														<li class="list-group-item no-border-all"><span class="fa fa-file-word-o"></span>&nbsp;<small>今日头条&克尔瑞：2017房地产...</small></li>
-													</ul>
-												</div>
-												<div class="col-md-1"></div>
-											</div>
 										</div>
-										<div style="height: 50px;width: 1px;"></div>
+										<hr>
+										<div class="row">
+										<div class="col-md-1"></div>
+										<div class="col-md-10">
+											<p class="text-muted">共 8 条评论</p>
+											<div class="row">
+												
+													<div>
+														<form class="form-inline">
+															<div class="col-md-1">
+															<img class="img-circle" src="img/滑稽.jpg" style="height: 30px;width: 30px;"/></div>
+															<div class="col-md-9">
+																
+															<input class="form-control" placeholder="添加评论" style="width: 100%;"/></div>
+															<div class="col-md-2">
+																<button class="btn btn-primary" style="width: 100%;">评论</button>
+															</div>
+														</form>
+													</div>
+											</div>
+											<br>
+											<div class="row">
+											<div>
+												<div class="col-md-1">
+													<img class="img-circle" src="img/滑稽.jpg" style="height: 30px;width: 30px;"/>
+												</div>
+												<div class="col-md-9">
+													<p class="text-muted">曾祥  &nbsp;&nbsp;一周前</p>
+													<p>
+														这里是评论内容这里是评论内容这里是评论内容这里是评论内容这里是评论内容这里是评论内容这里是评论内容
+													</p>
+												</div>
+											</div>
+										<div class="col-md-2">
+											<!--  点赞在这里 -->
+											<p class="text-right text-muted"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;15</p>
+										</div></div></div></div>
+										<br /><br /><br /><br /><br />
 									</div>
-								</div>
-							</div>
+									
 						</div>
-						<div class="col-md-3 column">
-							<div class="container-fluid">
-								<div class="row clearfix">
-									<div class="col-md-1 column"></div>
-									<div class="col-md-11 column">
-										<div style="background-color: white; padding:15px;">
+						<div class="col-md-3">
+	
+										<div style="background-color: white; padding:25px;">
 											&nbsp;&nbsp;
 											<button class="btn btn-primary" style="padding-left: 40px;padding-right: 40px;"><big><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;上传我的文件</big></button>
 											<hr>
@@ -197,10 +210,6 @@
 												<li class="list-group-item no-border-all"><span class="fa fa-file-word-o"></span>&nbsp;<small>今日头条&克尔瑞：2017房地产...</small></li>
 											</ul>
 										</div>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
