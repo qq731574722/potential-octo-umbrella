@@ -98,7 +98,7 @@
 							
 							<table class="table gtreetable" id="gtreetable"><thead><tr><th>目录</th></tr></thead></table>
 							
-							
+							<iframe src="http://gtreetable2.gilek.net/" width="100%" height="2000px"  frameborder="0" scrolling="no"></iframe>
 							
 						</div>
 					</div>
@@ -115,47 +115,7 @@
 	<script src="assets/scripts/klorofil-common.js"></script>
 	<script src="assets/scripts/jquery-ui.js"></script>
 	<script src="assets/scripts/jquery.browser.min.js"></script>
-	<script type="text/javascript">
-		jQuery('#gtreetable').gtreetable({
-		  'source': function (id) {
-		    return {
-		      type: 'GET',
-		      url: 'nodeChildren',
-		      data: { 'id': id },        
-		      dataType: 'json',
-		      error: function(XMLHttpRequest) {
-		        alert(XMLHttpRequest.status+': '+XMLHttpRequest.responseText);
-		      }
-		    }
-		  },
-		  'onSave':function (oNode) {
-		    return {
-		      type: 'POST',
-		      url: !oNode.isSaved() ? 'nodeCreate' : 'nodeUpdate?id=' + oNode.getId(),
-		      data: {
-		        parent: oNode.getParent(),
-		        name: oNode.getName(),
-		        position: oNode.getInsertPosition(),
-		        related: oNode.getRelatedNodeId()
-		      },
-		      dataType: 'json',
-		      error: function(XMLHttpRequest) {
-		        alert(XMLHttpRequest.status+': '+XMLHttpRequest.responseText);
-		      }
-		  	};
-		  },
-		  'onDelete':function (oNode) {
-		    return {
-		      type: 'POST',
-		      url: 'nodeDelete?id=' + oNode.getId(),
-		      dataType: 'json',
-		      error: function(XMLHttpRequest) {
-		        alert(XMLHttpRequest.status+': '+XMLHttpRequest.responseText);
-		      }
-		    };
-		  }
-		});
-	</script>
+	
 </body>
 
 </html>
