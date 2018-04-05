@@ -119,27 +119,27 @@
                            <div id="show" style="display:none;">
 							<div>
 								<span class="glyphicon glyphicon-link "></span> 目录.txt
-								<button type="button " class="close " aria-hidden="true">&times;</button>
+								<button type="button " class="close " aria-hidden="true ">&times;</button>
 								<div class="progress " id="" style="height: 1px; ">
-									<div class="progress-bar" id="目录.doc" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;">
+									<div class="progress-bar" id="processbar1" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;">
 										<span class="sr-only ">40% 完成</span>
 									</div>
 								</div>
 							</div>
 							<div>
 								<span class="glyphicon glyphicon-link "></span> login.jpg
-								<button type="button " class="close " aria-hidden="true">&times;</button>
+								<button type="button " class="close " aria-hidden="true ">&times;</button>
 								<div class="progress " style="height: 1px; ">
-									<div class="progress-bar" id="processbar2" role="progressbar" aria-valuenow="50 " aria-valuemin="0 " aria-valuemax="100 " style="width: 50%; background-color: #108EE9;">
+									<div class="progress-bar" id="processbar2" role="progressbar" aria-valuenow="50 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%; background-color: #108EE9;">
 										<span class="sr-only ">50% 完成</span>
 									</div>
 								</div>
 							</div>
 							<div>
 								<span class="glyphicon glyphicon-link "></span> 文档.doc
-								<button type="button " class="close " aria-hidden="true">&times;</button>
+								<button type="button " class="close " aria-hidden="true ">&times;</button>
 								<div class="progress " style="height: 1px; ">
-									<div class="progress-bar" id="processbar3" role="progressbar" aria-valuenow="40 " aria-valuemin="0 " aria-valuemax="100 " style="width: 60%; background-color: #108EE9;">
+									<div class="progress-bar" id="processbar3" role="progressbar" aria-valuenow="40 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%; background-color: #108EE9;">
 										<span class="sr-only ">60% 完成</span>
 									</div>
 								</div>
@@ -181,26 +181,20 @@
             /* 获取 文件的路径 ，用于测试*/ 
 			var timer1=null; 
 			var timer2=null;
+			var timer3=null;
             function getFilePath(){  
 				document.getElementById("show").style.display="";
-               timer1 = window.setInterval("onChange()", 30);
+			   timer1 = window.setInterval("onChange('processbar1')", 30);
+			   timer2 = window.setInterval("onChange('processbar2')", 30);
+			   timer3 = window.setInterval("onChange('processbar3')", 30);
+			   
             }      
 			function getFile(name){
-				timer2= window.setInterval(function(){Change(name);}, 10);
+				timer2= window.setInterval(function(){onChange(name);}, 10);
 			}
 			
-			function Change(name){
-				var processbar=null;
-				 processbar=document.getElementById(name); 
-  				processbar.style.width = parseInt(processbar.style.width) + 1 + "%"; 
-							alert(name); 
-  				if(processbar.style.width == "100%"){  
-    			 window.clearInterval(timer2); 
-  				}
-			}
-			
-			function onChange(){
-				var processbar = document.getElementById("目录.doc"); 
+			function onChange(name){
+				var processbar = document.getElementById(name); 
   				processbar.style.width = parseInt(processbar.style.width) + 2 + "%";
 				if(processbar.style.width == "100%")
     			 window.clearInterval(timer1); 
@@ -236,7 +230,7 @@
  			if(ftype=='text/plain')
   			{
 	  			box.innerHTML+='&nbsp;<img src="1.png" width="50" height="50" alt="">';
-				prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="'+fname+'" style="height: 1px; "><div class="progress-bar" id="processbar1" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
+				prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="" style="height: 1px; "><div class="progress-bar" id="'+fname+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
 				getFile(fname);
   			}
  			 else
@@ -244,13 +238,13 @@
 			 	if(ftype=='image/png')
 	 			{
   					box.innerHTML+='&nbsp;<img src="'+Url+'" width="50" 		height="50" alt="">';
-					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="'+fname+'" style="height: 1px; "><div class="progress-bar" id="processbar1" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
+					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="" style="height: 1px; "><div class="progress-bar" id="'+fname+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
 					getFile(fname);
 	 			}
 	 			else
 				{
 					box.innerHTML+='&nbsp;<img src="2.png" width="50" 		height="50" alt="">'; 
-					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="'+fname+'" style="height: 1px; "><div class="progress-bar" id="processbar1" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
+					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="" style="height: 1px; "><div class="progress-bar" id="'+fname+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
 					getFile(fname);
 	 			}
   			}
