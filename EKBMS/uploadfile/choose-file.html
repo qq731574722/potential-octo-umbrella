@@ -117,16 +117,16 @@
 							<br>
                       		<div id="prodiv"></div>
                            <div id="show" style="display:none;">
-							<div>
+							<div id="div1">
 								<span class="glyphicon glyphicon-link "></span> 目录.txt
-								<button type="button " class="close " aria-hidden="true ">&times;</button>
+								<button type="button " class="close " aria-hidden="true " onClick="removeDiv('div1')">&times;</button>
 								<div class="progress " id="" style="height: 1px; ">
 									<div class="progress-bar" id="processbar1" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;">
 										<span class="sr-only ">40% 完成</span>
 									</div>
 								</div>
 							</div>
-							<div>
+							<div >
 								<span class="glyphicon glyphicon-link "></span> login.jpg
 								<button type="button " class="close " aria-hidden="true ">&times;</button>
 								<div class="progress " style="height: 1px; ">
@@ -179,6 +179,11 @@
             //其他code如 alert($("#file").attr("value"))  
             }  
             /* 获取 文件的路径 ，用于测试*/ 
+			
+			function removeDiv(name){
+				document.getElementById('div1').style.display="none";
+			}
+			
 			var timer1=null; 
 			var timer2=null;
 			var timer3=null;
@@ -238,7 +243,7 @@
 			 	if(ftype=='image/png')
 	 			{
   					box.innerHTML+='&nbsp;<img src="'+Url+'" width="50" 		height="50" alt="">';
-					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="" style="height: 1px; "><div class="progress-bar" id="'+fname+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
+					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true " >&times;</button><div class="progress " id="" style="height: 1px; "><div class="progress-bar" id="'+fname+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
 					getFile(fname);
 	 			}
 	 			else
