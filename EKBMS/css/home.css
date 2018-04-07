@@ -46,6 +46,14 @@ body{font-family:"Open Sans",Arial,sans-serif;}
 	font-family: "microsoft yahei";
 }
 
+div .container .col-md-3 ul li{
+	margin: 8px 0;
+}
+div .container .col-md-3 ul li{
+	color: #108EE9;
+	font-family: "microsoft yahei";
+}
+
 div .container .row .col-md-4{
 	padding: 15px;
 }
