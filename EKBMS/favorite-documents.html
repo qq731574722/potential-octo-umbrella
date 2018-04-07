@@ -283,13 +283,13 @@
 										<table class="table" style="margin-left:10px;width:95%;">
 											<thead class="thead-dark">
 												<tr>
-													<p style="margin-left:20px"><span class="glyphicon glyphicon-chevron-left"></span>后退 &nbsp; &nbsp;
+													<p style="margin-left:20px"><span class="glyphicon glyphicon-chevron-left"></span><button id="BackBtn" style="border: 0px;background-color: white;">后退</button> &nbsp; &nbsp;
 														<span class="glyphicon glyphicon-folder-open"></span>&nbsp;<button id="NewFileBtn" style="border: 0px;background-color: white;">新建文件夹 </button>&nbsp; &nbsp;
-														<span class="glyphicon glyphicon-download-alt"></span>下载 &nbsp; &nbsp;
+														<span class="glyphicon glyphicon-download-alt"></span><button id="downLoadBtn" style="border: 0px;background-color: white;">下载 </button>&nbsp; &nbsp;
 														<span class="glyphicon glyphicon-trash"></span><button id="RemoveFile" style="border: 0px;background-color: white;">删除</button></p>
 												</tr>
 											</thead>
-											<tbody>
+											<tbody id="one-tbody">
 												<tr id="head-tr">
 													<td>
 														<div class="form-check">
@@ -301,7 +301,7 @@
 													<td>来源</td>
 													<td>创建日期</td>
 												</tr>
-												<tr class="table-light">
+												<tr class="table-light" style="cursor: pointer;">
 														<td>
 															<div class="form-check">
 																<label class="form-check-label">
@@ -315,7 +315,7 @@
 														<td>上传</td>
 														<td>2018-1-18</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -329,7 +329,7 @@
 													<td>上传</td>
 													<td>2018-1-18</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -345,7 +345,7 @@
 														2018-03-06 &nbsp; &nbsp; <i class="fab fa-hotjar" style="color: red"></i>
 													</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -361,7 +361,7 @@
 														2018-03-05 &nbsp; &nbsp; <i class="fab fa-hotjar" style="color: red"></i>
 													</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -375,7 +375,7 @@
 													<td>上传</td>
 													<td>2018-1-18</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -389,7 +389,7 @@
 													<td>上传</td>
 													<td>2018-1-18</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -405,7 +405,7 @@
 														2018-03-06 &nbsp; &nbsp; <i class="fab fa-hotjar" style="color: red"></i>
 													</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -418,7 +418,7 @@
 													<td>上传</td>
 													<td>2018-2-18</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -434,7 +434,7 @@
 														2018-03-06 &nbsp; &nbsp; <i class="fab fa-hotjar" style="color: red"></i>
 													</td>
 												</tr>
-												<tr class="table-danger">
+												<tr class="table-danger" style="cursor: pointer;">
 													<td>
 														<div class="form-check">
 															<label class="form-check-label">
@@ -450,6 +450,10 @@
 														2018-03-06
 													</td>
 												</tr>
+												<tr id="show-message" style="display: none;width: 664px;height: 44px;cursor: pointer;"></tr>
+											</tbody>
+											<tbody id="two-tbody" style="display: none;">
+												<tr><td>此文件夹还未包含文件</td></tr>
 											</tbody>
 										</table>
 									</div>
