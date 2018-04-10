@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Typography | Klorofil - Free Bootstrap Dashboard Template</title>
+	<title>用户管理</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -19,9 +19,6 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
-	<link rel="stylesheet" href="assets/css/site.css" />
-	<link rel="stylesheet" href="assets/css/bootstrap-gtreetable.min.css" />
-	<script type="text/javascript" src="assets/scripts/bootstrap-gtreetable.js"></script>
 </head>
 
 <body>
@@ -76,11 +73,11 @@
 								</ul>
 							</div>
 						</li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-bubble"></i> <span>评论管理</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-user"></i> <span>用户管理</span></a></li>
-						<li><a href="notifications.html" class="active"><i class="lnr lnr-dice"></i> <span>分类管理</span></a></li>
+						<li><a href="#" class=""><i class="lnr lnr-bubble"></i> <span>评论管理</span></a></li>
+						<li><a href="user-manage.html" class=""><i class="lnr lnr-user"></i> <span>用户管理</span></a></li>
+						<li><a href="classify-manage.html" class=""><i class="lnr lnr-dice"></i> <span>分类管理</span></a></li>
 						<li><a href="tables.html" class=""><i class="lnr lnr-crop"></i> <span>知识结构</span></a></li>
-						<li><a href="typography.html" class=""><i class="lnr lnr-map"></i> <span>学习路径</span></a></li>
+						<li><a href="typography.html" class="active"><i class="lnr lnr-map"></i> <span>学习路径</span></a></li>
 						<li><a href="typography.html" class=""><i class="lnr lnr-cog"></i> <span>个人中心</span></a></li>
 					</ul>
 				</nav>
@@ -92,14 +89,76 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
-					<h3 class="page-title">分类管理</h3>
+					<h3 class="page-title">学习路径管理</h3>
 					<div class="panel panel-headline">
 						<div class="panel-body">
-							
-							<table class="table gtreetable" id="gtreetable"><thead><tr><th>目录</th></tr></thead></table>
-							
-							<iframe src="http://gtreetable2.gilek.net/" width="100%" height="2000px"  frameborder="0" scrolling="no"></iframe>
-							
+							<div>
+								<form class="form-inline" role="form">
+									     <div class="input-group">
+						                    <input type="text" class="form-control">
+						                    <span class="input-group-btn">
+						                        <button class="btn btn-primary" type="button">搜索</button>
+						                    </span>
+						                </div>
+									</form>
+									<br />
+								<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>标题</th>
+												<th>创建者</th>
+												<th>创建时间</th>
+												<th>关联知识</th>
+												<th>描述</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>知识结构标题知识结构标题</td>
+												<td>曾祥</td>
+												<td>1997-10-8</td>
+												<td>16</td>
+												<td>这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述</td>
+												
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>知识结构标题知识结构标题</td>
+												<td>曾祥</td>
+												<td>1997-10-8</td>
+												<td>16</td>
+												<td>这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>知识结构标题知识结构标题</td>
+												<td>曾祥</td>
+												<td>1997-10-8</td>
+												<td>16</td>
+												<td>这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>知识结构标题知识结构标题</td>
+												<td>曾祥</td>
+												<td>1997-10-8</td>
+												<td>16</td>
+												<td>这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>知识结构标题知识结构标题</td>
+												<td>曾祥</td>
+												<td>1997-10-8</td>
+												<td>16</td>
+												<td>这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述这里是知识结构描述</td>
+											</tr>
+										</tbody>
+									</table>
+									
+							</div>
 						</div>
 					</div>
 				</div>
@@ -113,7 +172,18 @@
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="assets/scripts/klorofil-common.js"></script>
-	<script src="assets/scripts/jquery-ui.js"></script>
-	<script src="assets/scripts/jquery.browser.min.js"></script>
+	  <script type='text/javascript'>  
+            function selectFile(){  
+                //触发 文件选择的click事件  
+                $("#file").trigger("click");  
+  
+            //其他code如 alert($("#file").attr("value"))  
+            }  
+            /* 获取 文件的路径 ，用于测试*/  
+            function getFilePath(){  
+                window.location.href='index.html';
+            }  
+        </script> 
 </body>
+
 </html>
