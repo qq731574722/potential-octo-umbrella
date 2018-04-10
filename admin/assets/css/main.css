@@ -69,6 +69,43 @@ footer {
 	font-family: inherit;
 }
 
+.no1{
+	border-radius: 30px;
+	border-style:solid;
+	border-width:1px;
+  	border-color:orange;
+  	color: white;
+  	background-color:orange;
+  	padding: 2px;
+  	font-size: 10px;
+}
+
+.no2{
+	border-radius: 20px;
+	border-style:solid;
+	border-width:1px;
+  	border-color: #108EE9;
+  	color: #108EE9;
+  	padding: 4px;
+}
+
+.no3{
+	border-radius: 20px;
+	border-style:solid;
+	border-width:1px;
+  	border-color: #108EE9;
+  	color: #108EE9;
+  	padding: 4px;
+}
+
+.no4{
+	border-radius: 20px;
+	border-style:solid;
+	border-width:1px;
+  	border-color: #108EE9;
+  	color: #108EE9;
+  	padding: 4px;
+}
 
 /********************
  * LAYOUT
