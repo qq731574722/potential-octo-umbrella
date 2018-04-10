@@ -54,13 +54,27 @@
 						<form class="navbar-form navbar-left" role="search">
 							<div class="input-group">
 								<input type="text" class="form-control" style="border-radius :0px;" placeholder="输入关键字搜索..." />
+								<span id="cam" class="glyphicon glyphicon-camera" aria-hidden="true" style="position:absolute;top:7px;left:168px;z-index:999;color: #D6D6D6;font-size: x-large;cursor: pointer;"></span>
 								<span class="input-group-btn">
 									
-									<a href="search.html" class="btn btn-default" style="border-radius :0px;">
-										<span class="glyphicon glyphicon-search" style="color: dodgerblue;"></span>
+									<a href="search.html" class="btn btn-default" style="border-radius :0px;padding-top: 5px;padding-bottom: 4px;padding-left: 11px;padding-right: 11px;">
+										<span id="search-span" class="glyphicon glyphicon-search" style="color: dodgerblue;font-size: large;"></span>
 								</a>
 								
 								</span>
+							</div>
+							<div class="text-center" style="width: 236px;position: absolute;top: 41.3px;left: 900px;z-index: 999;display: none;">
+                            <input type="file" id="file" onchange="getFilePath()" style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;" multiple/> 
+								<button type="button" class="btn btn-default " id="box" onclick="selectFile()" style="padding:6px;padding-top: 25px; width: 100%; border-radius: 0;background-color: #FBFBFB;">
+                                	<div id="mgs">
+									<img src="img/icon-upload.png" width="78 " height="62 "/>
+									<br><br>
+									<p>点击或将图片拖拽到这里上传
+					
+									</p>
+									<span id="close-span" class="glyphicon glyphicon-remove" style="font-size: large;padding-left: 200px;color: #D6D6D6;"></span>
+                                    </div>
+								</button>
 							</div>
 						</form>
 						<li style="margin-top: 10px;">
@@ -416,5 +430,24 @@
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal -->
 		</div>
+	<script type="text/javascript">
+		$("#cam").hover(function(){
+			$(this).css("color","#AFD9EE");
+		},function(){
+			$(this).css("color","#D6D6D6");
+		});
+		$("#cam").click(function(){
+			$("div.text-center").show();
+			$(this).hide();
+			$("#search-span").removeClass("glyphicon-search");
+			$("#search-span").addClass("glyphicon-camera");
+		});
+		$("#close-span").click(function(){
+			$("div.text-center").hide();
+			$("#cam").show();
+			$("#search-span").addClass("glyphicon-search");
+			$("#search-span").removeClass("glyphicon-camera");
+		});
+	</script>
 	</body>
 </html>

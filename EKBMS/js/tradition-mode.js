@@ -21,7 +21,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdf) {
   }
   for(var pageNumber=1;pageNumber<=overPage;pageNumber++){
   pdf.getPage(pageNumber).then(function(page) {
-    var scale = 1.5;
+    var scale = 1.34;
     var viewport = page.getViewport(scale);
     // Prepare canvas using PDF page dimensions
     var $canvas=$("<canvas class='word-canvas'></canvas>");
@@ -51,7 +51,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdf) {
 function showAllPage(){
 	for(var pageNumber=4;pageNumber<=PDF.numPages;pageNumber++){
   PDF.getPage(pageNumber).then(function(page) {
-    var scale = 1.5;
+    var scale = 1.34;
     var viewport = page.getViewport(scale);
     // Prepare canvas using PDF page dimensions
     var $canvas=$("<canvas class='word-canvas'></canvas>");
@@ -75,3 +75,22 @@ function showAllPage(){
  }
 }
 document.getElementById("addMore").addEventListener('click',showAllPage);
+var hui=0;
+$(function(){
+	$("#comment-btn").click(function(e){
+		var inout=$("#comment-input").val();
+			if(inout == ""){
+				alert("评论不可为空！");
+			}else{
+				if(hui == 1){
+					alert("不可重复评论！");
+				}else{
+				hui=1;
+				alert("评论发表成功！");
+				$("#first-comment").after("<div class='row'><div><div class='col-md-1'><img class='img-circle' src='img/滑稽.jpg' style='height: 30px;width: 30px;' /></div><div class='col-md-9'><p class='text-muted'>曾祥 &nbsp;&nbsp;刚刚</p><p>" + inout + "</p></div></div><div class='col-md-2'><!--  点赞在这里 --><p class='text-right text-muted'><span class='glyphicon glyphicon-thumbs-up'></span>&nbsp;0</p></div></div>");
+				$("#comment-input").val("");
+				}
+			}
+			e.stopPropagation();
+	});
+})
