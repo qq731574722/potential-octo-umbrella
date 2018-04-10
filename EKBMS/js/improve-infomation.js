@@ -88,4 +88,38 @@ $(document).ready(function() {
 		$("#type-div").hide();
 		$("#second-1").parent().hide();
 	});
+	
+	$("span.good").toggle(function(e){
+//					alert($("#label-input").offset().top);
+					$(this).css('position','absolute');
+					$(this).css({
+						'top': $("#label-input").offset().top - $("#label-input").height()-355,
+						'left': $("#label-input").offset().left + 2 + parseInt($("#label-input").css("padding-left"))-357,
+					});
+					$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))+parseInt($(this).width()));
+				},function(e){
+					$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))-parseInt($(this).width()));
+					$(this).css('position','static');
+				});
+				$("#label-input").blur(function(e){
+//					alert($(this).val()=="");
+//					alert($(this).css("padding-left"));
+					if($(this).val()==""){}else{
+					$("span.good:last").after("<span class='bad'><span style='background-color: #EEEEEE;'>&nbsp;"+$(this).val()+ "&nbsp;</span><span class='glyphicon glyphicon-remove' aria-hidden='true' style='color: #797979;'></span><span style='background-color: white;'>&nbsp;</span></span>");
+//											<span class="good"><span style="background-color: #EEEEEE;">&nbsp;标签1&nbsp;</span><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color: #797979;"></span><span style="background-color: white;">&nbsp;</span></span>
+					var $bad=$("span.bad:last");
+					$bad.css('position','absolute');
+					$bad.css({
+						'top': $("#label-input").offset().top - $("#label-input").height()-355,
+						'left': $("#label-input").offset().left + 2 + parseInt($("#label-input").css("padding-left"))-357,
+					});
+					$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))+parseInt($bad.width()));
+					$(this).val("");
+					$bad.click(function(e){
+						$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))-parseInt($(this).width()));
+						$(this).remove();
+//						alert("sd");
+					});
+					}
+				});
 })

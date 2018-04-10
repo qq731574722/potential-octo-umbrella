@@ -147,3 +147,11 @@ div .container .row .col-md-4 .knlg-struct a h4{
 .new-file-hover{
 	background-color: #B3D7FF;
 }
+.good{
+	font-size: 16px;
+	cursor: pointer;
+}
+.bad{
+	font-size: 16px;
+	cursor: pointer;
+}
