@@ -17,8 +17,12 @@ $(function() {
 				}
 				e.stopPropagation();
 			});
-			$("#inlineRadio1").click(function(){
+			$("#inlineRadio2").click(function(){
 				$("#show1").hide();
 				$("#show2").show();
+			});
+			$("#inlineRadio1").click(function(){
+				$("#show2").hide();
+				$("#show1").show();
 			});
 		})
