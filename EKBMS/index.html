@@ -371,7 +371,7 @@
 					</span></h3>
 				<div class="col-md-6" style="padding: 25px;" >
 					<ul style="font-size: 18px;">
-						<li class="wdxs"><a >货币供应量和利率作为货币政策中介目标的适用性？</a></li>
+						<li class="wdxs"><a id="qusetion1">货币供应量和利率作为货币政策中介目标的适用性？</a></li>
 						<li class="wdxs"><a>资本充足率对信贷、经济及货币政策传导的影响？</a></li>
 						<li class="wdxs"><a>基于DCC-MVGARCH模型的检验？</a></li>
 						<li class="wdxs"><a>基于泰尔指数的四家商业银行不良贷款差异性分析？</a></li>
@@ -423,7 +423,7 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">取消
 						</button>
-						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="toastr.success('发布成功！')">
+						<button type="button" id="fbxs" class="btn btn-primary" data-dismiss="modal">
 							确认发布
 						</button>
 					</div>
@@ -448,6 +448,10 @@
 			$("#search-span").addClass("glyphicon-search");
 			$("#search-span").removeClass("glyphicon-camera");
 		});
+		$("#fbxs").click(function(){
+			toastr.success('发布成功！')
+			$("#qusetion1").text("问题1");
+		})
 	</script>
 	</body>
 </html>
