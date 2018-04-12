@@ -94,8 +94,8 @@
 								<h3>分类筛选</h3>
 								<br>
 								<ul class="list-unstyled">
-									<li><input type="checkbox" value=""> <span><i
-												class="icon-folder-open"></i><big>学科</big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<li style="cursor: pointer;"><input type="checkbox" value=""> <span><i
+												class="icon-folder-open"></i><big>学科</big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="color: #8D99A8;"></span></span>
 										<ul class="search-list">
 											<li class="search-list-li"><span><i
@@ -131,7 +131,7 @@
 										</ul>
 									</li>
 									<br>
-									<li><input type="checkbox" value=""><span><i
+									<li style="cursor: pointer;"><input type="checkbox" value=""><span><i
 												class="icon-folder-open"></i> <big>来源机构</big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="color: #8D99A8;"></span></span>
 										<ul class="search-list">
@@ -142,7 +142,7 @@
 											</li>
 										</ul>
 									</li><br>
-									<li><input type="checkbox" value=""><span><i
+									<li style="cursor: pointer;"><input type="checkbox" value=""><span><i
 												class="icon-folder-open"></i> <big>研究层次</big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="color: #8D99A8;"></span></span>
 										<ul class="search-list">
@@ -153,11 +153,11 @@
 											</li>
 										</ul>
 									</li><br>
-									<li><input type="checkbox" value=""><span><i
+									<li style="cursor: pointer;"><input type="checkbox" value=""><span><i
 												class="icon-folder-open"></i> <big>发表年度</big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="color: #8D99A8;"></span></span></li><br>
-									<li><input type="checkbox" value=""><span><i
-												class="icon-folder-open"></i> <big>作者</big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<li style="cursor: pointer;"><input type="checkbox" value=""><span><i
+												class="icon-folder-open"></i> <big>作者</big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 												<span class="glyphicon glyphicon-menu-down" aria-hidden="true" style="color: #8D99A8;"></span></span></li>
 								</ul>
 							</div>
@@ -242,7 +242,7 @@
 					<div class="col-md-12 column">
 					<hr></div>
 					<!-- 结果显示栏 -->
-					<div class="container-fluid">
+					<div class="container-fluid" id="show1">
 						<div class="row clearfix">
 							<div class="col-md-10 column">
 								<ul class="list-group">
@@ -296,10 +296,14 @@
 										</p>
 									</li>
 									<li class="list-group-item no-border">
-										<i class="fas fa-clipboard-list fa-lg link-picture"></i>
+										<div class="row" style="margin: 0px;">
+										<div class="col-md-3 column" style="padding: 0px;">
+										<img src="img/头像.jpg" style="width: 180px;height: 115px;">
+										</div>
+										<div class="col-md-9 column" style="padding: 0px;padding-left: 15px;">
 										<a href="#" class="a-link">&nbsp;&nbsp;<big><b>知识结构标题</b></big></a>
 										<br> Designed as <span class="blue-word">Ant Design</span>，提炼和服务企业级中后台产品的交互语言和视觉风格。React Component 基础上精心封装的高质量 UI 组件。基于 npm + webpack + babel 的工作流，…
-										<br>
+										<br><br>
 										<p class="gray-word">
 											<small>
 								2018-2-27 00:00:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
@@ -307,12 +311,17 @@
 								创建者：曾祥
 								</small>
 										</p>
+										</div></div>
 									</li>
 									<li class="list-group-item no-border">
-										<i class="fas fa-code-branch fa-lg link-picture"></i>
+										<div class="row" style="margin: 0px;">
+										<div class="col-md-3 column" style="padding: 0px;">
+										<img src="img/头像.jpg" style="width: 180px;height: 115px;">
+										</div>
+										<div class="col-md-9 column" style="padding: 0px;padding-left: 15px;">
 										<a href="#" class="a-link">&nbsp;&nbsp;<big><b>学习路径标题</b></big></a>
 										<br> Designed as <span class="blue-word">Ant Design</span>，提炼和服务企业级中后台产品的交互语言和视觉风格。React Component 基础上精心封装的高质量 UI 组件。基于 npm + webpack + babel 的工作流，…
-										<br>
+										<br><br>
 										<p class="gray-word">
 											<small>
 								2018-2-27 00:00:00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
@@ -321,12 +330,96 @@
 								创建者：曾祥
 											</small>
 										</p>
+										</div></div>
 									</li>
 								</ul>
 							</div>
 							<div class="col-md-2 column"></div>
 						</div>
 					</div>
+					
+					<div class="container-fluid" id="show2" style="display: none;">
+						<div class="row clearfix">
+							<div class="col-md-10 column">
+								<ul class="list-group">
+									<li class="list-group-item no-border-all">
+										
+										<a href="tradition-mode.html" class="a-link"><big><b><span class="fa fa-file-word-o">&nbsp;</span>&nbsp;&nbsp;<span class="blue-word">互联网经济</span>、制度与创新价值链——基于人力资本与制度发展指数的测度分析</b></big></a>
+										<br> 随着<span class="blue-word">互联网经济</span>的飞速发展,信息交流更为便捷、交易成本不断下降。基于高技术含量的<span class="blue-word">互联网</span>产业体系不断演进,熨平了信息流传播的阻隔和落差。同时,基于知识体系交叉衍生出新产业、新业态,推动中国<span class="blue-word">经济</span>质量的提升与效能的增加,推动中国向全球创新价值链的高附加值阶段攀升...
+										<br>
+										<p class="gray-word">
+											<small>
+								2018-3-27 18:20:10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+									</li>
+									<li class="list-group-item no-border-all">
+										
+										<a href="tradition-mode.html" class="a-link"><big><b><span class="fa fa-file-word-o">&nbsp;</span>&nbsp;&nbsp;<span class="blue-word">互联网经济</span>、制度与创新价值链——基于人力资本与制度发展指数的测度分析</b></big></a>
+										<br> 随着<span class="blue-word">互联网经济</span>的飞速发展,信息交流更为便捷、交易成本不断下降。基于高技术含量的<span class="blue-word">互联网</span>产业体系不断演进,熨平了信息流传播的阻隔和落差。同时,基于知识体系交叉衍生出新产业、新业态,推动中国<span class="blue-word">经济</span>质量的提升与效能的增加,推动中国向全球创新价值链的高附加值阶段攀升...
+										<br>
+										<p class="gray-word">
+											<small>
+								2018-3-27 18:20:10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+									</li>
+									<li class="list-group-item no-border-all">
+										
+										<a href="tradition-mode.html" class="a-link"><big><b><span class="fa fa-file-word-o">&nbsp;</span>&nbsp;&nbsp;<span class="blue-word">互联网经济</span>、制度与创新价值链——基于人力资本与制度发展指数的测度分析</b></big></a>
+										<br> 随着<span class="blue-word">互联网经济</span>的飞速发展,信息交流更为便捷、交易成本不断下降。基于高技术含量的<span class="blue-word">互联网</span>产业体系不断演进,熨平了信息流传播的阻隔和落差。同时,基于知识体系交叉衍生出新产业、新业态,推动中国<span class="blue-word">经济</span>质量的提升与效能的增加,推动中国向全球创新价值链的高附加值阶段攀升...
+										<br>
+										<p class="gray-word">
+											<small>
+								2018-3-27 18:20:10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+									</li>
+									<li class="list-group-item no-border-all">
+										
+										<a href="tradition-mode.html" class="a-link"><big><b><span class="fa fa-file-word-o">&nbsp;</span>&nbsp;&nbsp;<span class="blue-word">互联网经济</span>、制度与创新价值链——基于人力资本与制度发展指数的测度分析</b></big></a>
+										<br> 随着<span class="blue-word">互联网经济</span>的飞速发展,信息交流更为便捷、交易成本不断下降。基于高技术含量的<span class="blue-word">互联网</span>产业体系不断演进,熨平了信息流传播的阻隔和落差。同时,基于知识体系交叉衍生出新产业、新业态,推动中国<span class="blue-word">经济</span>质量的提升与效能的增加,推动中国向全球创新价值链的高附加值阶段攀升...
+										<br>
+										<p class="gray-word">
+											<small>
+								2018-3-27 18:20:10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+									</li>
+									<li class="list-group-item no-border-all">
+										
+										<a href="tradition-mode.html" class="a-link"><big><b><span class="fa fa-file-word-o">&nbsp;</span>&nbsp;&nbsp;<span class="blue-word">互联网经济</span>、制度与创新价值链——基于人力资本与制度发展指数的测度分析</b></big></a>
+										<br> 随着<span class="blue-word">互联网经济</span>的飞速发展,信息交流更为便捷、交易成本不断下降。基于高技术含量的<span class="blue-word">互联网</span>产业体系不断演进,熨平了信息流传播的阻隔和落差。同时,基于知识体系交叉衍生出新产业、新业态,推动中国<span class="blue-word">经济</span>质量的提升与效能的增加,推动中国向全球创新价值链的高附加值阶段攀升...
+										<br>
+										<p class="gray-word">
+											<small>
+								2018-3-27 18:20:10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+									</li>
+									<li class="list-group-item no-border-all">
+										
+										<a href="tradition-mode.html" class="a-link"><big><b><span class="fa fa-file-word-o">&nbsp;</span>&nbsp;&nbsp;<span class="blue-word">互联网经济</span>、制度与创新价值链——基于人力资本与制度发展指数的测度分析</b></big></a>
+										<br> 随着<span class="blue-word">互联网经济</span>的飞速发展,信息交流更为便捷、交易成本不断下降。基于高技术含量的<span class="blue-word">互联网</span>产业体系不断演进,熨平了信息流传播的阻隔和落差。同时,基于知识体系交叉衍生出新产业、新业态,推动中国<span class="blue-word">经济</span>质量的提升与效能的增加,推动中国向全球创新价值链的高附加值阶段攀升...
+										<br>
+										<p class="gray-word">
+											<small>
+								2018-3-27 18:20:10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+								99下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       
+								贡献者：曾祥
+								</small>
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-2 column"></div>
+						</div>
+					</div>
+					
 					<!-- 底部分页块 -->
 					<div class="col-md-1 column"></div>
 					<div class="col-md-10 column">

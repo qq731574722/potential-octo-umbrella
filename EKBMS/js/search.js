@@ -16,5 +16,9 @@ $(function() {
 					// i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
 				}
 				e.stopPropagation();
-			})
+			});
+			$("#inlineRadio1").click(function(){
+				$("#show1").hide();
+				$("#show2").show();
+			});
 		})
