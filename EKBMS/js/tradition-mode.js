@@ -1,6 +1,6 @@
 // If absolute URL from the remote server is provided, configure the CORS
 // header on that server.
-var url = 'file/jie.pdf';
+var url = 'file/互联网金融-成长的逻辑-吴晓求.pdf';
 
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
 var pdfjsLib = window['pdfjs-dist/build/pdf'];
@@ -86,7 +86,12 @@ $(function(){
 					alert("不可重复评论！");
 				}else{
 				hui=1;
-				alert("评论发表成功！");
+//				alert("评论发表成功！");
+				toastr.options = {
+					positionClass: "toast-top-center",
+					hideDuration: "300",
+				};
+				toastr.success("评论发表成功！");
 				$("#first-comment").after("<div class='row'><div><div class='col-md-1'><img class='img-circle' src='img/滑稽.jpg' style='height: 30px;width: 30px;' /></div><div class='col-md-9'><p class='text-muted'>曾祥 &nbsp;&nbsp;刚刚</p><p>" + inout + "</p></div></div><div class='col-md-2'><!--  点赞在这里 --><p class='text-right text-muted'><span class='glyphicon glyphicon-thumbs-up'></span>&nbsp;0</p></div></div>");
 				$("#comment-input").val("");
 				}
