@@ -120,7 +120,7 @@
 							<div id="div1">
 								<span class="glyphicon glyphicon-link "></span> 目录.txt
 								<button type="button " class="close " aria-hidden="true " onClick="removeDiv('div1')">&times;</button>
-								<div class="progress " id="" style="height: 1px; ">
+								<div class="progress " id="" style="height:2px; ">
 									<div class="progress-bar" id="processbar1" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;">
 										<span class="sr-only ">40% 完成</span>
 									</div>
@@ -186,25 +186,36 @@
 			
 			var timer1=null; 
 			var timer2=null;
-			var timer3=null;
-            function getFilePath(){  
-				document.getElementById("show").style.display="";
-			   timer1 = window.setInterval("onChange('processbar1')", 30);
-			   timer2 = window.setInterval("onChange('processbar2')", 30);
-			   timer3 = window.setInterval("onChange('processbar3')", 30);
-			   
-            }      
+			
 			function getFile(name){
-				timer2= window.setInterval(function(){onChange(name);}, 10);
+				timer1= window.setInterval(function(){onChange(name);}, 30);
+			}
+			
+				function getFile1(name){
+				timer2= window.setInterval(function(){onChange1(name);}, 30);
 			}
 			
 			function onChange(name){
 				var processbar = document.getElementById(name); 
-  				processbar.style.width = parseInt(processbar.style.width) + 2 + "%";
-				if(processbar.style.width == "100%")
-    			 window.clearInterval(timer1); 
-				
+  				processbar.style.width = parseInt(processbar.style.width) + 2+ "%";
+				if(processbar.style.width == "200%"){
+					processbar.style.backgroundColor="#00AA00";
+					window.clearInterval(timer1); 
+					
+				}	
 			}
+			
+			function onChange1(name){
+				var processbar = document.getElementById(name); 
+  				processbar.style.width = parseInt(processbar.style.width) + 1+ "%";
+				if(processbar.style.width == "200%"){
+					processbar.style.backgroundColor="#00AA00";
+					window.clearInterval(timer2); 
+					
+				}	
+			}
+			
+			
 			/* 实现拖拽上传*/
 		var box=document.getElementById('box');
 		box.ondragover=function (e){
@@ -248,9 +259,13 @@
 	 			}
 	 			else
 				{
+					var name="互联网经济.pdf";
 					box.innerHTML+='&nbsp;<img src="2.png" width="50" 		height="50" alt="">'; 
-					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="" style="height: 1px; "><div class="progress-bar" id="'+fname+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
+					box.innerHTML+='&nbsp;<img src="3.jpg" width="50" 		height="50" alt="">'; 
+					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+fname+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="" style="height: 10px; "><div class="progress-bar" id="'+fname+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
+					prodiv.innerHTML+='<div><span class="glyphicon glyphicon-link "></span>'+name+'<button type="button " class="close " aria-hidden="true ">&times;</button><div class="progress " id="" style="height: 10px; "><div class="progress-bar" id="'+name+'" role="progressbar " aria-valuenow="60 " aria-valuemin="0 " aria-valuemax="100 " style="width: 0%;background-color: #108EE9;"><span class="sr-only ">50% 完成</span></div></div></div>';
 					getFile(fname);
+					getFile1(name);
 	 			}
   			}
 	

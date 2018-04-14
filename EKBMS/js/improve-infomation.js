@@ -82,7 +82,7 @@ $(document).ready(function() {
 		$("#second-1").parent().hide();
 	});
 	$("div.third-type:eq(0)").click(function() {
-		$("#type-input").val("财务管理/资产评估/工程造价");
+		$("#type-input").val("经济/金融经济学/应用");
 		$(this).parent().parent().hide();
 		$(this).parent().hide();
 		$("#type-div").hide();
