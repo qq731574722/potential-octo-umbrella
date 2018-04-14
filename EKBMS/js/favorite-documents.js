@@ -1,12 +1,16 @@
 $(function() {
 	$("#NewFileBtn").bind("click", function(event) {
 		//var $tbody=$(this).parents("table").children("tbody");
-		$("tr.table-light").before("<tr class='table-danger' id='new-file' style='cursor: pointer;'><td><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' value=''>&nbsp;<span class='glyphicon glyphicon-folder-open' style='color: #F4C63D;width: 15.5px;height: 14px;'></span>&nbsp;新建文件夹</label></div></td><td>创建</td><td>2018-1-18</td></tr>");
+		var pro=prompt("","新建文件夹");
+		if(pro == ""){alert("文件名不可为空！");}
+		else{
+		$("tr.table-light").before("<tr class='table-danger' id='new-file' style='cursor: pointer;'><td><div class='form-check'><label class='form-check-label'><input type='checkbox' class='form-check-input' value=''>&nbsp;<span class='glyphicon glyphicon-folder-open' style='color: #F4C63D;width: 15.5px;height: 14px;'></span>&nbsp;"+pro+"</label></div></td><td>创建</td><td>2018-1-18</td></tr>");
 		trover();
 		$("#new-file").click(function(){
 		$("#one-tbody").hide();
 		$("#two-tbody").show();
 		});
+		}
 	});
 	$("#BackBtn").bind("click",function(){
 		$("#one-tbody").show();
