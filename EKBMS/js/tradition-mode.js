@@ -92,7 +92,7 @@ $(function(){
 					hideDuration: "300",
 				};
 				toastr.success("评论发表成功！");
-				$("#first-comment").after("<div class='row'><div><div class='col-md-1'><img class='img-circle' src='img/滑稽.jpg' style='height: 30px;width: 30px;' /></div><div class='col-md-9'><p class='text-muted'>曾祥 &nbsp;&nbsp;刚刚</p><p>" + inout + "</p></div></div><div class='col-md-2'><!--  点赞在这里 --><p class='text-right text-muted'><span class='glyphicon glyphicon-thumbs-up'></span>&nbsp;0</p></div></div>");
+				$("#first-comment").before("<div class='row'><div><div class='col-md-1'><img class='img-circle' src='img/滑稽.jpg' style='height: 30px;width: 30px;' /></div><div class='col-md-9'><p class='text-muted'>曾祥 &nbsp;&nbsp;刚刚</p><p>" + inout + "</p></div></div><div class='col-md-2'><!--  点赞在这里 --><p class='text-right text-muted'><span class='glyphicon glyphicon-thumbs-up'></span>&nbsp;0</p></div></div>");
 				$("#comment-input").val("");
 				}
 			}
