@@ -93,8 +93,8 @@ $(document).ready(function() {
 //					alert($("#label-input").offset().top);
 					$(this).css('position','absolute');
 					$(this).css({
-						'top': $("#label-input").offset().top - $("#label-input").height()-355,
-						'left': $("#label-input").offset().left + 2 + parseInt($("#label-input").css("padding-left"))-357,
+						'top': $("#label-input").offset().top - $("#label-input").height()-352,
+						'left': $("#label-input").offset().left + 4 + parseInt($("#label-input").css("padding-left"))-370,
 					});
 					$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))+parseInt($(this).width()));
 				},function(e){
@@ -110,8 +110,8 @@ $(document).ready(function() {
 					var $bad=$("span.bad:last");
 					$bad.css('position','absolute');
 					$bad.css({
-						'top': $("#label-input").offset().top - $("#label-input").height()-355,
-						'left': $("#label-input").offset().left + 2 + parseInt($("#label-input").css("padding-left"))-357,
+						'top': $("#label-input").offset().top - $("#label-input").height()-352,
+						'left': $("#label-input").offset().left + 4 + parseInt($("#label-input").css("padding-left"))-370,
 					});
 					$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))+parseInt($bad.width()));
 					$(this).val("");
