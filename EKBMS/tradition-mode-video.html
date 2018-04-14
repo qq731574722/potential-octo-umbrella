@@ -6,7 +6,6 @@
 		<title>搜索</title>
 		<link rel="stylesheet" href="css/toastr.min.css" />
 		<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-		<script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
 		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -18,6 +17,18 @@
 			.text-muted {
 				font-size: 14px;
 			}
+			video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); 
+}
+
 		</style>
 	</head>
 
@@ -139,13 +150,12 @@
 											</small>
 								</p>
 								<hr>
-								<div id="showWordDiv" style="width: 100%; height: auto;">
-
+								<div id="showWordDiv" style="width: 797.5px; height: auto;">
+										<video src="file/QQ.mp4" style="width: 797.5px; height: auto;" controls>  
+    										Your browser does not support the <video> element.      
+										</video>
 								</div>
 								<br>
-								<div class="text-center">
-									<button id="addMore" class="btn btn-default btn-lg" type="button" style="color: dodgerblue;border-color: dodgerblue;">加载更多</button>
-								</div>
 								<hr>
 								<div class="row">
 									<div class="col-md-1"></div>
@@ -161,7 +171,7 @@
 
 														<input id="comment-input" class="form-control" placeholder="添加评论" style="width: 100%;"/></div>
 													<div class="col-md-2">
-														<button class="btn btn-primary" style="width: 100%;" id="comment-btn" type="button" onclick="$("comment2").show();">评论</button>
+														<button class="btn btn-primary" style="width: 100%;" id="comment-btn" type="button">评论</button>
 													</div>
 												</form>
 											</div>
@@ -236,8 +246,34 @@
 					</div>
 				</div>
 			</div>
-			<script type="text/javascript" src="js/tradition-mode.js"></script>
-
+			<script>
+//				Function changeColor(){
+//					var tumb=document.getElementById("tumb");
+//					tumb.style.color="#108EE9"
+//				}
+var hui=0;
+				$("#comment-btn").click(function(e){
+		var inout=$("#comment-input").val();
+			if(inout == ""){
+				alert("评论不可为空！");
+			}else{
+				if(hui == 1){
+					alert("不可重复评论！");
+				}else{
+				hui=1;
+//				alert("评论发表成功！");
+				toastr.options = {
+					positionClass: "toast-top-center",
+					hideDuration: "300",
+				};
+				toastr.success("评论发表成功！");
+				$("#first-comment").before("<div class='row'><div><div class='col-md-1'><img class='img-circle' src='img/滑稽.jpg' style='height: 30px;width: 30px;' /></div><div class='col-md-9'><p class='text-muted'>曾祥 &nbsp;&nbsp;刚刚</p><p>" + inout + "</p></div></div><div class='col-md-2'><!--  点赞在这里 --><p class='text-right text-muted'><span class='glyphicon glyphicon-thumbs-up'></span>&nbsp;0</p></div></div>");
+				$("#comment-input").val("");
+				}
+			}
+			e.stopPropagation();
+	});
+			</script>
 	</body>
 
 </html>
