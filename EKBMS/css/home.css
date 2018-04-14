@@ -79,9 +79,10 @@ div .container .row .col-md-4 .knlg-struct a h4{
 }
 
 .container .row .col-md-3 .path{
-	border-width: 1px;
-	border-color: #108EE9;
+	border: 1px;
 	border-style: solid;
+	border-collapse: #888888;
+	box-shadow: 2px 2px 2px #888888;
 	padding: 20px;
 }
 
