@@ -105,7 +105,7 @@ $(document).ready(function() {
 //					alert($(this).val()=="");
 //					alert($(this).css("padding-left"));
 					if($(this).val()==""){}else{
-					$("span.good:last").after("<span class='bad'><span style='background-color: #EEEEEE;'>&nbsp;"+$(this).val()+ "&nbsp;</span><span class='glyphicon glyphicon-remove' aria-hidden='true' style='color: #797979;'></span><span style='background-color: white;'>&nbsp;</span></span>");
+					$("span.good:last").after("<span class='bad'><span class='label label-success'>&nbsp;"+$(this).val()+ "&nbsp;<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></span><span style='background-color: white;'>&nbsp;</span></span>");
 //											<span class="good"><span style="background-color: #EEEEEE;">&nbsp;标签1&nbsp;</span><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color: #797979;"></span><span style="background-color: white;">&nbsp;</span></span>
 					var $bad=$("span.bad:last");
 					$bad.css('position','absolute');
