@@ -82,7 +82,7 @@ $(document).ready(function() {
 		$("#second-1").parent().hide();
 	});
 	$("div.third-type:eq(0)").click(function() {
-		$("#type-input").val("财务管理/资产评估/工程造价");
+		$("#type-input").val("经济/金融经济学/应用");
 		$(this).parent().parent().hide();
 		$(this).parent().hide();
 		$("#type-div").hide();
@@ -93,8 +93,8 @@ $(document).ready(function() {
 //					alert($("#label-input").offset().top);
 					$(this).css('position','absolute');
 					$(this).css({
-						'top': $("#label-input").offset().top - $("#label-input").height()-355,
-						'left': $("#label-input").offset().left + 2 + parseInt($("#label-input").css("padding-left"))-357,
+						'top': $("#label-input").offset().top - $("#label-input").height()-352,
+						'left': $("#label-input").offset().left + 4 + parseInt($("#label-input").css("padding-left"))-370,
 					});
 					$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))+parseInt($(this).width()));
 				},function(e){
@@ -105,13 +105,13 @@ $(document).ready(function() {
 //					alert($(this).val()=="");
 //					alert($(this).css("padding-left"));
 					if($(this).val()==""){}else{
-					$("span.good:last").after("<span class='bad'><span style='background-color: #EEEEEE;'>&nbsp;"+$(this).val()+ "&nbsp;</span><span class='glyphicon glyphicon-remove' aria-hidden='true' style='color: #797979;'></span><span style='background-color: white;'>&nbsp;</span></span>");
+					$("span.good:last").after("<span class='bad'><span class='label label-success'>&nbsp;"+$(this).val()+ "&nbsp;<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></span><span style='background-color: white;'>&nbsp;</span></span>");
 //											<span class="good"><span style="background-color: #EEEEEE;">&nbsp;标签1&nbsp;</span><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color: #797979;"></span><span style="background-color: white;">&nbsp;</span></span>
 					var $bad=$("span.bad:last");
 					$bad.css('position','absolute');
 					$bad.css({
-						'top': $("#label-input").offset().top - $("#label-input").height()-355,
-						'left': $("#label-input").offset().left + 2 + parseInt($("#label-input").css("padding-left"))-357,
+						'top': $("#label-input").offset().top - $("#label-input").height()-352,
+						'left': $("#label-input").offset().left + 4 + parseInt($("#label-input").css("padding-left"))-370,
 					});
 					$("#label-input").css("padding-left",parseInt($("#label-input").css("padding-left"))+parseInt($bad.width()));
 					$(this).val("");
