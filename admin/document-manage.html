@@ -101,7 +101,7 @@
 										<button type="button" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> 添加文档</button>&nbsp;
 										<label for="classify">分类：</label>
 									    <select name="classify" class="form-control">
-									      <option>金融 / 房地产 / 工程造价</option>
+									      <option>全部分类</option>
 									      <option>2</option>
 									      <option>3</option>
 									      <option>4</option>
@@ -160,7 +160,7 @@
 												<td> 经济 / 金融经济学 / 应用 </td>
 												<td>pdf</td>
 												<td>0.18 M</td>
-												<td><label class="label label-warning">待审核</label></td>
+												<td><label class="label label-warning" id="bb">待审核</label></td>
 												<td>
 													<a href="#" >查看</a>&nbsp;
 													<a href="#"  data-toggle="modal" data-target="#myModal">审核</a>&nbsp;
@@ -384,7 +384,9 @@
 		}
 		$("#aa").click(function(){
 			toastr.success('操作成功！')
-			
+			$("#bb").removeClass('label-warning');
+			$("#bb").addClass('label-success');
+			$("#bb").text('审核通过');
 		})
 		
 	</script>
