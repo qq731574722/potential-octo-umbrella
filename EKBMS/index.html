@@ -15,7 +15,7 @@
 		<script src="js/toastr.min.js"></script>
 	</head>
 
-	<body>
+	<body onload="fiveAfter()">
 		<nav class="navbar navbar-inverse" role="navigation" style="border-radius :0px; background-color: rgba(63,63,63,1); margin-bottom: 0px;">
 			<div class="container">
 				<div class="navbar-header">
@@ -470,8 +470,15 @@
             /* 获取 文件的路径 ，用于测试*/  
             function getFilePath(){  
                 window.location.href='search.html';
-            }  
-
+            }
+            var timer1=null; 
+            function fiveAfter(){
+				timer1= window.setInterval("onChange()",3000);
+            }
+			function onChange(){
+				toastr.info('您发布的知识悬赏获得了回复！<br><a href="konwledge-award2.html">点击查看</a>');
+				window.clearInterval(timer1);
+			}
 	</script>
 	</body>
 </html>
