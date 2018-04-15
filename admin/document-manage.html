@@ -175,10 +175,10 @@
 												<td> 经济 / 金融经济学 / 应用</td>
 												<td>docx</td>
 												<td>0.04 M</td>
-												<td><label class="label label-warning">待审核</label></td>
+												<td><label id="dd" class="label label-warning">待审核</label></td>
 												<td>
 													<a href="#">查看</a>&nbsp;
-													<a href="#">审核</a>&nbsp;
+													<a data-toggle="modal" data-target="#myModal3" href="#">审核</a>&nbsp;
 													<a href="#">删除</a>&nbsp;
 												</td>
 											</tr>
@@ -186,7 +186,7 @@
 												<td>3</td>
 												<td><span class="fa fa-file-powerpoint-o"></span> 互联网经济、制度与创新价值链——基于人力资... </td>
 												<td>马琳</td>
-												<td>2018/4/12 18:20</td>
+												<td>2018/04/12 18:20</td>
 												<td>投资管理 / 房地产 / 产业报告 </td>
 												<td>ppt</td>
 												<td>4.1 M</td>
@@ -201,7 +201,7 @@
 												<td>4</td>
 												<td><span class="fa fa-file-excel-o"></span> 互联网经济与我国产业转型升级 </td>
 												<td>郑欣玲 </td>
-												<td>2018-4-11 10:40</td>
+												<td>2018/04/11 10:40</td>
 												<td>金融 / 企业 / 金融行为 </td>
 												<td>excel</td>
 												<td>0.5 M</td>
@@ -216,7 +216,7 @@
 												<td>5</td>
 												<td><span class="fa fa-file-pdf-o"></span>  关于互联网经济发展的若干思考 </td>
 												<td>谭解</td>
-												<td>2018/3/28 14:20</td>
+												<td>2018/03/28 14:20</td>
 												<td>经济 / 金融经济学 / 应用 </td>
 												<td>pdf</td>
 												<td>3.3 M</td>
@@ -231,7 +231,7 @@
 												<td>6</td>
 												<td><span class="fa fa-file-word-o"></span>   互联网经济模式成型对证券行业的影响因素分析 </td>
 												<td>苏惠娜</td>
-												<td>2018/3/27 14:40</td>
+												<td>2018/03/27 14:40</td>
 												<td>经济 / 金融经济学 / 应用</td>
 												<td>doc</td>
 												<td>2.4 M</td>
@@ -246,7 +246,7 @@
 												<td>7</td>
 												<td><span class="fa fa-file-word-o"></span> 今日头条&克尔瑞：2017房地产行业报告</td>
 												<td>曾祥</td>
-												<td>2018/3/27 09:37</td>
+												<td>2018/03/27 09:37</td>
 												<td>投资管理 / 房地产 / 产业报告 </td>
 												<td>doc</td>
 												<td>1.8 M</td>
@@ -261,9 +261,9 @@
 												<td>8</td>
 												<td><span class="fa fa-file-excel-o"></span> 互联网金融专业课程介绍 </td>
 												<td>李杰</td>
-												<td>2018/3/24 22:22</td>
+												<td>2018/03/24 22:22</td>
 												<td>投资管理 / 房地产 / 产业报告 </td>
-												<td>doc</td>
+												<td>xls</td>
 												<td>5.7 M</td>
 												<td><label class="label label-success">审核通过</label></td>
 												<td>
@@ -276,7 +276,7 @@
 												<td>9</td>
 												<td><span class="fa fa-file-pdf-o"></span>互联网金融：成长的逻辑 </td>
 												<td>郑欣玲 </td>
-												<td>2018/3/8 19:43</td>
+												<td>2018/03/0819:43</td>
 												<td>企业管理 / 金融 / 行业背景 </td>
 												<td>pdf</td>
 												<td>6.8 M</td>
@@ -291,7 +291,7 @@
 												<td>10</td>
 												<td><span class="fa fa-file-powerpoint-o"></span> 互联网金融概述_图文 </td>
 												<td>许倩倩</td>
-												<td>2018/3/8 14:15</td>
+												<td>2018/03/08 14:15</td>
 												<td>企业管理 / 金融 / 行业背景 </td>
 												<td>ppt</td>
 												<td>4.9 M</td>
@@ -326,7 +326,45 @@
 		</div>
 		<!-- END MAIN -->
 	<!-- END WRAPPER -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">知识审核</h4>
+            </div>
+            <div class="modal-body">
+            	<div class="form-group">
+				    <label for="name">审核结果</label>
+				    <select class="form-control" onChange="change(this)">
+				      <option value="1">通过</option>
+				      <option value="2">未通过</option>
+				    </select>
+				    <br>
+				    <div id="choose" style="display: none;">
+				    	<label for="name">请选择原因</label>
+					    <select multiple class="form-control" onChange="change(this)">
+					      <option>政治敏感</option>
+					      <option>标题与内容不符</option>
+					      <option>内容格式错误</option>
+					      <option>涉嫌版权问题</option>
+					      <option>其他</option>
+					    </select>
+					    <div id="other" style="display: none;">
+					    	<br /><label for="name">请填写原因：</label><input class="form-control"></div>
+				    </div>
+				    
+				  </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button id="cc" type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -363,6 +401,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
+
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog" style="width: 1200px;">
         <div class="modal-content">
@@ -403,6 +442,12 @@
 			$("#bb").removeClass('label-warning');
 			$("#bb").addClass('label-success');
 			$("#bb").text('审核通过');
+		})
+		$("#cc").click(function(){
+			toastr.success('操作成功！')
+			$("#dd").removeClass('label-warning');
+			$("#dd").addClass('label-success');
+			$("#dd").text('审核通过');
 		})
 		
 	</script>
